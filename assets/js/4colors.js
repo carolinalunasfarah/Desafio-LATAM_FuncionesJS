@@ -4,6 +4,7 @@ let dgreen = document.getElementById("3green");
 let dyellow = document.getElementById("4yellow");
 let dkey = document.getElementById("key");
 
+// Black background change
 let blackbg = (changebg) => {
     changebg.target.style.backgroundColor = "black";
 };
@@ -13,6 +14,7 @@ dred.addEventListener("click", blackbg);
 dgreen.addEventListener("click", blackbg);
 dyellow.addEventListener("click", blackbg);
 
+// New div
 function createNewDiv (bgcolor) {
     let newdiv = document.createElement("div");
     newdiv.style.height = "200px";
@@ -25,6 +27,7 @@ function createNewDiv (bgcolor) {
     document.body.appendChild(newdiv);
 }
 
+// Keydown events
 document.addEventListener("keydown", function (event) {
     if (event.key === "a") {
         dkey.style.backgroundColor = "pink";
