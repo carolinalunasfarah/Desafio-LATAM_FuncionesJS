@@ -13,6 +13,18 @@ dred.addEventListener("click", blackbg);
 dgreen.addEventListener("click", blackbg);
 dyellow.addEventListener("click", blackbg);
 
+function createNewDiv (bgcolor) {
+    let newdiv = document.createElement("div");
+    newdiv.style.height = "200px";
+    newdiv.style.width = "200px";
+    newdiv.style.margin = "3rem";
+
+    let newContent = document.createElement("div")
+    newdiv.appendChild(newContent);
+    newdiv.style.backgroundColor = bgcolor;
+    document.body.appendChild(newdiv);
+}
+
 document.addEventListener("keydown", function (event) {
     if (event.key === "a") {
         dkey.style.backgroundColor = "pink";
@@ -21,5 +33,14 @@ document.addEventListener("keydown", function (event) {
     }
     else if (event.key === "d") {
         dkey.style.backgroundColor = "cyan";
+    }
+    else if (event.key === "q") {
+        createNewDiv("magenta");
+    }
+    else if (event.key === "w") {
+        createNewDiv("purple");
+    }
+    else if (event.key === "e") {
+        createNewDiv("skyblue");
     }
 });
