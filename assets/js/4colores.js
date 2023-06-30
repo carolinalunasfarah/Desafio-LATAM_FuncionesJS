@@ -1,5 +1,11 @@
-let blackbg = document.getElementById("2red");
+let dblue = document.getElementById ("1blue");
+let dred = document.getElementById ("2red");
+let dgreen = document.getElementById ("3green");
+let dyellow = document.getElementById ("4yellow");
+let dkey = document.getElementById("key");
 
-blackbg.addEventListener("click", () => {
-    blackbg.style.backgroundColor = "black";
-});
+let blackbg = (changebg) => {
+    changebg.target.style.backgroundColor = "black";
+}
+
+dred.addEventListener("click", (blackbg))
